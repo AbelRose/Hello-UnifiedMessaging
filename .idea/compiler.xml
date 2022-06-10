@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="um-support" />
+        <module name="um-stream" />
+        <module name="um-handler" />
+        <module name="um-web" />
+        <module name="um-service-impl" />
+        <module name="um-client" />
+        <module name="um-service" />
+        <module name="um-common" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

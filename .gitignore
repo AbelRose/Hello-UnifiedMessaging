@@ -1,0 +1,9 @@
+# Project exclude paths
+/um-client/target/
+/um-common/target/
+/um-handler/target/
+/um-service/target/
+/um-service-impl/target/
+/um-stream/target/
+/um-support/target/
+/um-web/target/
