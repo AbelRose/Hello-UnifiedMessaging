@@ -17,4 +17,16 @@
       </profile>
     </annotationProcessing>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="um-client" options="-parameters" />
+      <module name="um-common" options="-parameters" />
+      <module name="um-handler" options="-parameters" />
+      <module name="um-service" options="-parameters" />
+      <module name="um-service-impl" options="-parameters" />
+      <module name="um-stream" options="-parameters" />
+      <module name="um-support" options="-parameters" />
+      <module name="um-web" options="-parameters" />
+    </option>
+  </component>
 </project>
