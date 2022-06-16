@@ -6,4 +6,5 @@
 /um-service-impl/target/
 /um-stream/target/
 /um-support/target/
-/um-web/target/
+.idea/
+**/src/test/
