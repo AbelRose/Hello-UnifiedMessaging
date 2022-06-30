@@ -8,3 +8,4 @@
 /um-support/target/
 .idea/
 **/src/test/
+/logs
