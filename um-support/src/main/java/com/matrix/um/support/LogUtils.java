@@ -4,6 +4,8 @@ import cn.monitor4all.logRecord.bean.LogDTO;
 import cn.monitor4all.logRecord.service.CustomLogListener;
 import com.alibaba.fastjson.JSON;
 import com.google.common.base.Throwables;
+import com.matrix.um.common.domain.AnchorInfo;
+import com.matrix.um.common.domain.LogParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -34,32 +36,32 @@ public class LogUtils extends CustomLogListener {
     /**
      * 记录当前对象信息
      */
-//    public void print(LogParam logParam) {
-//        logParam.setTimestamp(System.currentTimeMillis());
-//        log.info(JSON.toJSONString(logParam));
-//    }
+    public void print(LogParam logParam) {
+        logParam.setTimestamp(System.currentTimeMillis());
+        log.info(JSON.toJSONString(logParam));
+    }
 
     /**
      * 记录打点信息
      */
-//    public void print(AnchorInfo anchorInfo) {
-//        anchorInfo.setTimestamp(System.currentTimeMillis());
-//        String message = JSON.toJSONString(anchorInfo);
-//        log.info(message);
-//
-//        try {
-//            kafkaUtils.send(topicName, message);
-//        } catch (Exception e) {
-//            log.error("LogUtils#print kafka fail! e:{},params:{}", Throwables.getStackTraceAsString(e)
-//                    , JSON.toJSONString(anchorInfo));
-//        }
-//    }
+    public void print(AnchorInfo anchorInfo) {
+        anchorInfo.setTimestamp(System.currentTimeMillis());
+        String message = JSON.toJSONString(anchorInfo);
+        log.info(message);
+
+        try {
+            kafkaUtils.send(topicName, message);
+        } catch (Exception e) {
+            log.error("LogUtils#print kafka fail! e:{},params:{}", Throwables.getStackTraceAsString(e)
+                    , JSON.toJSONString(anchorInfo));
+        }
+    }
 
     /**
      * 记录当前对象信息和打点信息
      */
-//    public void print(LogParam logParam, AnchorInfo anchorInfo) {
-//        print(anchorInfo);
-//        print(logParam);
-//    }
+    public void print(LogParam logParam, AnchorInfo anchorInfo) {
+        print(anchorInfo);
+        print(logParam);
+    }
 }
